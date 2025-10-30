@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在庫ロスダッシュボード</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="headline">
+          <img
+            src="assets/zaiko-saiko-logo.svg"
+            alt="Zaiko Saiko ロゴ"
+            class="brand-logo"
+          />
+          <div class="headline-text">
+            <h1>在庫ロスモニタリング</h1>
+            <p class="lead">
+              店別・商品別の帳簿在庫と実在庫の差分を素早く把握し、ロスの原因分析に活用できます。
+            </p>
+          </div>
+        </div>
+        <button class="primary-action" type="button">レポートを共有</button>
+      </header>
+
+      <section class="overview">
+        <article class="overview-card">
+          <p class="label">総ロス金額</p>
+          <p class="value" id="totalLoss">¥0</p>
+          <p class="help">直近棚卸より</p>
+        </article>
+        <article class="overview-card">
+          <p class="label">ロス発生店舗</p>
+          <p class="value" id="storesWithLoss">0 店舗</p>
+          <p class="help">差分が発生した店舗数</p>
+        </article>
+        <article class="overview-card">
+          <p class="label">平均ロス率</p>
+          <p class="value" id="averageLossRate">0%</p>
+          <p class="help">(帳簿在庫-実在庫)/帳簿在庫</p>
+        </article>
+      </section>
+
+      <section class="table-section">
+        <div class="section-head">
+          <h2>店別・商品別ロス一覧</h2>
+          <div class="filters">
+            <label class="filter">
+              <span>店舗</span>
+              <select id="storeFilter">
+                <option value="all">すべて</option>
+              </select>
+            </label>
+            <label class="filter">
+              <span>ロスステータス</span>
+              <select id="lossFilter">
+                <option value="all">すべて</option>
+                <option value="positive">ロスあり</option>
+                <option value="negative">過剰在庫</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>店舗</th>
+                <th>商品</th>
+                <th class="numeric">帳簿在庫</th>
+                <th class="numeric">実在庫</th>
+                <th class="numeric">差分</th>
+                <th class="numeric">ロス率</th>
+                <th>備考</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <footer class="app-footer">
+      <p>次の棚卸は 2024/06/30 を予定しています。</p>
+      <button class="ghost-action" type="button">棚卸スケジュールを確認</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
