@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="140" viewBox="0 0 320 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#12D6C5" />
+      <stop offset="100%" stop-color="#1FA6FF" />
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB347" />
+      <stop offset="100%" stop-color="#FF6B1A" />
+    </linearGradient>
+    <linearGradient id="grad-text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#12D6C5" />
+      <stop offset="50%" stop-color="#1FA6FF" />
+      <stop offset="100%" stop-color="#FFB347" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#031836" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <rect width="320" height="140" rx="28" fill="#052641" />
+  <g filter="url(#shadow)" transform="translate(22 22)">
+    <path d="M55 8c12 0 22 9.8 22 22c0 8.8-4.7 16.4-11.7 20.3l8.8 8.8c1.6 1.6 0.5 4.3-1.8 4.3H39.5c-1.4 0-2.5-1.1-2.5-2.5V24.5c0-2.3 2.7-3.4 4.3-1.8l7.7 7.7C52.6 27.5 55 23 55 18c0-5.5-4.5-10-10-10H28" stroke="url(#grad-orange)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <rect x="6" y="18" width="44" height="44" rx="10" fill="#0B3757" stroke="url(#grad-teal)" stroke-width="6" />
+    <path d="M22 30l14-6v12l-14 6V30z" fill="#18C7C2" />
+    <path d="M36 24v12l-14 6v-12l14-6z" fill="#0D7EA6" />
+    <path d="M22 30l14-6 6 3-14 6-6-3z" fill="#19A5D9" />
+  </g>
+  <g font-family="'Nunito', 'Inter', sans-serif" font-weight="800" font-size="48" letter-spacing="0.02em">
+    <text x="140" y="70" fill="url(#grad-text)">ZAIKO</text>
+    <text x="140" y="118" fill="url(#grad-orange)">SAIKO!</text>
+  </g>
+</svg>
